@@ -7,11 +7,7 @@ const Login = () => {
 
     return (
         <>
-            {
-                isLoading ? <img src={logo} alt="logo" /> : <>
-                    {loginWithRedirect()}
-                </>
-            }
+            {isLoading ? <img src={logo} alt="logo" /> : <>{loginWithRedirect()}</>}
         </>
 
     )

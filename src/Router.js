@@ -9,7 +9,7 @@ import Login from "./components/Login";
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <>
-            <Route path="/login" element={<Login />} />
+            {/* <Route path="/login" element={<Login />} /> */}
             <Route path="/" element={<Navbar />} >
                 <Route path="/home" element={<Home />} />
                 <Route path="/quest" element={<Quest />} />
