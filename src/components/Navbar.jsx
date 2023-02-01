@@ -1,11 +1,31 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
+import '../styles/navbar.sass'
 
 const Navbar = () => {
     return (
         <>
-            <div>
-                Navbar
+            <div className='divNav'>
+                <ul className='divNav__ul'>
+                    <li className='divNav__li'>
+                        <Link to='/Home' className='divNav__Link'>
+                            <i className="fa-solid fa-house divNav__icon"></i>
+                            <p>Home</p>
+                        </Link>
+                    </li>
+                    <li className='divNav__li'>
+                        <Link to='/' className='divNav__Link'>
+                            <i className="fa-solid fa-chart-line divNav__icon"></i>
+                            <p>Estadísticas</p>
+                        </Link>
+                    </li>
+                    <li className='divNav__li'>
+                        <Link to='/Profile' className='divNav__Link'>
+                            <i className="fa-regular fa-user divNav__icon"></i>
+                            <p>Perfil</p>
+                        </Link>
+                    </li>
+                </ul>
             </div>
             <Outlet />
         </>
