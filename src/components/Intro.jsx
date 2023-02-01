@@ -4,9 +4,6 @@ import G from '../imgs/icons8-google 1.png'
 import Logo from '../imgs/Logo.png'
 import { Link } from 'react-router-dom'
 
-// import { Link } from 'react-router-dom'
-
-
 const Intro = () => {
   return (
     <>
@@ -15,9 +12,9 @@ const Intro = () => {
         <div className="frame-41">
           <div className="iniciar-sesion">Iniciar sesión</div>
           <div className="container2">
-            <Link to="/login">
+            <Link className="link-intro" to="/login">
               <button className="login-google">
-                <img src={G} className="icon-google" alt='' />
+                <img src={G} className="icon-google" alt='icon-google' />
                 <p className="continuar-con-google">Continuar con Google</p>
               </button>
             </Link>

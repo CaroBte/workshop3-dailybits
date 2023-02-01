@@ -27,7 +27,6 @@ const Profile = () => {
                 <button onClick={handleLogout}>Cerrar sesión</button>
             </div>}
         </>
-
     )
 }
 
