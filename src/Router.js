@@ -5,11 +5,13 @@ import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import Quest from "./components/Quest";
 import Login from "./components/Login";
+import Intro from "./components/Intro";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <>
             <Route path="/login" element={<Login />} />
+            <Route path="/intro" element={<Intro />} />
 
             <Route path="/" element={<Navbar />} >
                 <Route path="/home" element={<Home />} />
