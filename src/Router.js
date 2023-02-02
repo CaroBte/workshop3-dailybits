@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Quest from "./components/Quest";
 import Login from "./components/Login";
 import Intro from "./components/Intro";
+import Stats from "./components/Stats";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -15,6 +16,7 @@ export const router = createBrowserRouter(
             <Route path="/" element={<Intro />} />
             <Route path="/" element={<Navbar />} >
                 <Route path="/home" element={<Home />} />
+                <Route path="/stats" element={<Stats />} />
                 <Route path="/profile" element={<Profile />} />
             </Route>
         </>

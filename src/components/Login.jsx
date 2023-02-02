@@ -3,7 +3,7 @@ import React from 'react'
 import logo from '../imgs/Logo.png'
 
 const Login = () => {
-    const { loginWithRedirect } = useAuth0()
+    const { loginWithRedirect, isLoading } = useAuth0()
 
     const handleAuth = () => {
         loginWithRedirect()
@@ -11,7 +11,7 @@ const Login = () => {
 
     return (
         <>
-            {handleAuth()}
+            {isLoading ? <p>Cargando</p> : handleAuth()}
         </>
 
     )
