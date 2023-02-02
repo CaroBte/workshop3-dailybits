@@ -11,10 +11,10 @@ export const router = createBrowserRouter(
     createRoutesFromElements(
         <>
             <Route path="/login" element={<Login />} />
+            <Route path="/quest" element={<Quest />} />
             <Route path="/" element={<Intro />} />
             <Route path="/" element={<Navbar />} >
                 <Route path="/home" element={<Home />} />
-                <Route path="/quest" element={<Quest />} />
                 <Route path="/profile" element={<Profile />} />
             </Route>
         </>

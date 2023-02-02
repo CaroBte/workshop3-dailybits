@@ -3,16 +3,19 @@ import React from 'react'
 import logo from '../imgs/Logo.png'
 
 const Login = () => {
-    const { loginWithRedirect, isLoading } = useAuth0()
+    const { loginWithRedirect } = useAuth0()
+
+    const handleAuth = () => {
+        loginWithRedirect()
+    }
 
     return (
         <>
-            {isLoading ?
-                <img className='logo-loading' src={logo} alt="logo" />
-                : <> {loginWithRedirect()}</>}
+            {handleAuth()}
         </>
 
     )
+
 }
 
 export default Login
