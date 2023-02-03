@@ -11,7 +11,7 @@ const Login = () => {
 
     return (
         <>
-            {isLoading ? <p>Cargando</p> : handleAuth()}
+            {isLoading ? logo : handleAuth()}
         </>
 
     )
