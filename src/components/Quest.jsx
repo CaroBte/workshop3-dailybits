@@ -1,13 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import kid from '../imgs/kid.png'
 import '../styles/quest.sass'
 
-const Quest = () => {
+const Quest = ({ data }) => {
+
+    console.log(data);
+
+
     return (
         <>
             <div>
                 <div className="top-bar">
-                    <i className="fa-solid fa-xmark"></i>
+                    <Link to="/" className='link'>
+                        <i className="fa-solid fa-xmark"></i>
+                    </Link>
                     <div className='progress-bar'></div>
                     <div className=''>
                         <span className='heart'>❤</span>
