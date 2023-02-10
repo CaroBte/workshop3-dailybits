@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 import kid from '../imgs/kid.png'
 import '../styles/quest.sass'
 
-const Quest = ({ data }) => {
-
-    console.log(data);
+const Quest = () => {
 
 
     return (

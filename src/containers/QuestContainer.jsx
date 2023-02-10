@@ -1,25 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { api } from '../api'
 import Quest from '../components/Quest'
+import { questContext } from '../context/QuestContext'
+
 
 const QuestContainer = () => {
-
-    const [data, setData] = useState()
-
-    const getQuestions = async () => {
-        const data = await api.getQuestions()
-        console.log(data);
-        setData(data)
-    }
-
-    useEffect(() => {
-        getQuestions()
-    }, [])
-
+    const { category } = useContext(questContext)
+    console.log(category);
 
     return (
         <>
-            <Quest data={data} />
+            <Quest />
         </>
     )
 }
