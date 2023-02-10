@@ -1,12 +1,47 @@
 .top-bar
     display: flex
     flex-direction: row
+    margin-top: 1.5rem
     margin-left: 1rem
-    width: 70%
-    justify-content: space-evenly
+    justify-content: space-around
 
     .progress-bar
         background-color: white
-        width: 50%
+        width: 70%
         height: 0.7rem
         border-radius: 10px
+
+    .heart
+        color: red
+        margin: 0
+
+    .lives-counter
+        margin-left: 0.3rem
+
+.quest
+    display: flex
+    margin: 1.5rem 1rem
+    gap: 2rem
+    align-items: center
+
+.options
+    position: absolute
+    bottom: 4rem
+    width: 100%
+
+    .option
+        background-color: #232E35
+        align-items: center
+
+        .fa-circle
+            color: white
+
+    #btn-comprobar
+        width: 90%
+        border: none
+        color: white
+        background-color: #6B47DC
+        padding: 1rem
+        border-radius: 15px
+        text-align: center
+        margin: 0 1rem
