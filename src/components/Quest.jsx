@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import kid from '../imgs/kid.png'
 import '../styles/quest.sass'
 import { questContext } from '../context/QuestContext'
@@ -10,8 +10,14 @@ const Quest = () => {
     console.log("desde quest:", category);
     let [counter, setCounter] = useState(0)
 
+    let navigate = useNavigate()
+
     const nextQuest = () => {
-        setCounter(counter + 1)
+        console.log("holi c:");
+        if (counter === category.length - 1) {
+            alert("terminaste c:")
+            navigate("/")
+        } setCounter(counter + 1)
     }
 
     return (
