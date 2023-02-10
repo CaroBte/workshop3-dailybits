@@ -2,12 +2,15 @@ import React from "react";
 import { RouterProvider } from 'react-router-dom';
 import { router } from "./Router";
 import './styles/app.sass'
+import { QuestProvider } from "./context/QuestContext"
 
 function App() {
 
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <QuestProvider>
+        <RouterProvider router={router} />
+      </QuestProvider>
     </div>
   );
 
