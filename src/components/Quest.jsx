@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import kid from '../imgs/kid.png'
 import '../styles/quest.sass'
+import { questContext } from '../context/QuestContext'
 
 const Quest = () => {
 
+    const { category } = useContext(questContext)
+    console.log("desde quest:", category);
+    let [counter, setCounter] = useState(0)
+
+    const nextQuest = () => {
+        setCounter(counter + 1)
+    }
 
     return (
         <>
@@ -21,31 +29,28 @@ const Quest = () => {
                 </div>
                 <div className='quest'>
                     <img src={kid} />
-                    <h3>¿Cuál es la forma más eficiente de aplicar estilos CSS en un documento HTML?</h3>
+                    <h3>{category[counter].question}</h3>
                 </div>
                 <div className='options'>
                     <div className='stats-item option'>
-                        <p>En Línea</p>
+                        <p>{category[counter].a}</p>
                         <i className="fa-regular fa-circle"></i>
                     </div>
                     <div className='stats-item option'>
-                        <p>Incrustado en la cabecera</p>
+                        <p>{category[counter].b}</p>
                         <i className="fa-regular fa-circle"></i>
                     </div>
                     <div className='stats-item option'>
-                        <p>Hojas de estilo externas</p>
+                        <p>{category[counter].c}</p>
                         <i className="fa-regular fa-circle"></i>
                     </div>
                     <div className='stats-item option'>
-                        <p>Mediante PHP</p>
+                        <p>{category[counter].d}</p>
                         <i className="fa-regular fa-circle"></i>
                     </div>
-
-                    <button id='btn-comprobar'>COMPROBAR</button>
+                    <button onClick={() => nextQuest()} id='btn-comprobar'>COMPROBAR</button>
                 </div>
-
             </div>
-
         </>
     )
 }
